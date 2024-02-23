@@ -1,0 +1,15 @@
+.card-container {
+    width: 98%;
+    padding: 10px 20px 30px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%; /* Opcional: ajusta la altura según sea necesario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .content {
+    /* Estilos adicionales para el contenido si es necesario */
+  }

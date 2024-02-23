@@ -19,6 +19,11 @@ import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { FormsModule } from '@angular/forms';
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+import { AngularFirePerformanceModule } from "@angular/fire/compat/performance";
+
+
 
 @NgModule({
   declarations: [
@@ -28,9 +33,11 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     AhorroComponent,
     MovimientoComponent,
     LoginComponent,
+    
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
@@ -41,7 +48,10 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFirestoreModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    NgxGoogleAnalyticsModule.forRoot('TU_MEASUREMENT_ID'),
+    NgxGoogleAnalyticsRouterModule,
+    AngularFirePerformanceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
