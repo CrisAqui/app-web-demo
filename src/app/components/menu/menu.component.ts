@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { AngularFirePerformance } from '@angular/fire/compat/performance';
 import { Router } from '@angular/router';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
+import { NavBarDemoComponent } from '../nav-bar-demo/nav-bar-demo.component';
+
 
 @Component({
   selector: 'app-menu',

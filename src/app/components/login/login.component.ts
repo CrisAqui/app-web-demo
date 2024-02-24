@@ -20,7 +20,7 @@ import { initializeApp } from "firebase/app";
 export class LoginComponent {
 
   
-  
+  titulo: any = "Registrarr"; 
   usuario: Cliente = { usuario: '', password: '' };
 
   constructor(
@@ -30,36 +30,38 @@ export class LoginComponent {
     private perf: AngularFirePerformance,
     private firestore: AngularFirestore
     ) { 
-      const firebaseConfig = {
-        apiKey: "AIzaSyCJUmfuu19-AkOZA_4mvaWmllg096x_Yzg",
-        authDomain: "appdemo-ec320.firebaseapp.com",
-        databaseURL: "https://appdemo-ec320-default-rtdb.firebaseio.com",
-        projectId: "appdemo-ec320",
-        storageBucket: "appdemo-ec320.appspot.com",
-        messagingSenderId: "294823504350",
-        appId: "1:294823504350:web:c9087505ddb56824b0154f",
-        measurementId: "G-N8XC0CF3WP"
-      };
-      const app = initializeApp(firebaseConfig);
-        const remoteConfig = getRemoteConfig(app);
-        remoteConfig.settings.minimumFetchIntervalMillis = 3600000;
-        fetchAndActivate(remoteConfig)
-        .then(() => {
-          console.warn("entro aqui")
-          const value = getValue(remoteConfig, 'prueba1');
-          console.log(value.asString());
-          // Usa el valor de configuración como parte de tu lógica de A/B testing
-        })
-        .catch((err) => {
-          console.error('Error al recuperar la configuración remota', err);
-        });
+      
       
     }
     
   
   ngOnInit(){
     
-     
+    const firebaseConfig = {
+      apiKey: "AIzaSyCJUmfuu19-AkOZA_4mvaWmllg096x_Yzg",
+      authDomain: "appdemo-ec320.firebaseapp.com",
+      databaseURL: "https://appdemo-ec320-default-rtdb.firebaseio.com",
+      projectId: "appdemo-ec320",
+      storageBucket: "appdemo-ec320.appspot.com",
+      messagingSenderId: "294823504350",
+      appId: "1:294823504350:web:c9087505ddb56824b0154f",
+      measurementId: "G-N8XC0CF3WP"
+    };
+    const app = initializeApp(firebaseConfig);
+      const remoteConfig = getRemoteConfig(app);
+      remoteConfig.settings.minimumFetchIntervalMillis = 60000;
+      fetchAndActivate(remoteConfig)
+      .then(() => {
+        console.warn("entro aqui")
+        const value= getValue(remoteConfig, 'pruebaText');
+        this.titulo=value.asString();
+        console.log(value);
+        // Usa el valor de configuración como parte de tu lógica de A/B testing
+      })
+      .catch((err) => {
+        console.error('Error al recuperar la configuración remota', err);
+      }); 
+
     this.gaService.pageView('/login', 'Página de Inicio')
     this.someFunction()
   }
@@ -79,6 +81,10 @@ export class LoginComponent {
       
 
       this.router.navigate(['/menu']);
+  }
+
+  goToRegistrar(){
+    this.router.navigate(['/registrar']);
   }
 
   async someFunction() {

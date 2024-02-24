@@ -1,14 +1,22 @@
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container navbar-container"> <!-- Añade un contenedor personalizado para centrar el contenido -->
+<!--   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container navbar-container"> 
       <a class="navbar-brand" href="#">AppDemo</a>
-      <div class="navbar-nav ml-auto"> <!-- Utiliza ml-auto para empujar los elementos al extremo derecho -->
-        <!-- <a class="nav-item nav-link active" href="#">Inicio</a> -->
+      <div class="navbar-nav ml-auto"> 
+        
         <a routerLink="/movimiento" class="nav-item nav-link" href="#">Movimientos</a>
         <a routerLink="/transferencia" class="nav-item nav-link" href="#">Transferencias</a>
         <a routerLink="/ahorro" class="nav-item nav-link" href="#">Ahorros</a>
       </div>
     </div>
-  </nav>
+  </nav> -->
+
+  <mat-toolbar color="primary">
+    <span>Mi Aplicación</span>
+    <span class="example-spacer"></span>
+    <button mat-button routerLink="/movimiento">Movimientos</button>
+    <button mat-button routerLink="/transferencia">Transferencias</button>
+    <button mat-button routerLink="/ahorro">Ahorros</button>
+  </mat-toolbar>
   
   <br>
   <div class="card-container">

@@ -1,5 +1,5 @@
 <div class="centrado">
-    <h1>Registrar</h1>
+    <h1>{{titulo}}</h1>
     <mat-card class="contenido-con-margen">
 
       <mat-form-field class="example-full-width">
@@ -12,7 +12,9 @@
         <input [(ngModel)]="usuario.password" type="password" matInput placeholder="" value="">
       </mat-form-field>
 
-      <button (click)="agregarUsuario()" style="padding: 10px;"  mat-raised-button color="primary">Registrar</button>
+      <button (click)="agregarUsuario()" style="padding: 10px;"  mat-raised-button color="primary">Ingresar</button>
+      <br>
+      <h5 (click)="goToRegistrar()">¿No tiene cuenta?</h5>
     </mat-card>
 </div>
 

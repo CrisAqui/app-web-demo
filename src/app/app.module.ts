@@ -22,7 +22,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { FormsModule } from '@angular/forms';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 import { AngularFirePerformanceModule } from "@angular/fire/compat/performance";
-
+import { RegistrarComponent } from './components/registrar/registrar.component';
+import { NavBarDemoComponent } from './components/nav-bar-demo/nav-bar-demo.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { AngularFirePerformanceModule } from "@angular/fire/compat/performance";
     AhorroComponent,
     MovimientoComponent,
     LoginComponent,
+    RegistrarComponent,
+    NavBarDemoComponent,
     
   ],
   imports: [
@@ -51,7 +55,8 @@ import { AngularFirePerformanceModule } from "@angular/fire/compat/performance";
     AngularFireDatabaseModule,
     NgxGoogleAnalyticsModule.forRoot('TU_MEASUREMENT_ID'),
     NgxGoogleAnalyticsRouterModule,
-    AngularFirePerformanceModule
+    AngularFirePerformanceModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

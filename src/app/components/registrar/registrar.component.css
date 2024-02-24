@@ -1,0 +1,18 @@
+.centrado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 10px;
+  }
+  
+  h1 {
+    margin-bottom: 20px; /* Espacio opcional entre el h1 y el mat-card */
+  }
+  
+  .contenido-con-margen {
+    width: 25%;
+    margin: 10px;
+    padding: 30px;
+  }
